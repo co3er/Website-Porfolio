@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co3er Portfolio</title>
+  <!-- Particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Typed.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVU3G1+XQeZP6QZllnOslfJkYq7ZKcZ9MdPOj+6wLxYuXgG0XfvG7Z1+QFAd+GnN7z4xvGru2em3C1hHQmLDyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff; }
+    body { background: #000; overflow: hidden; }
+
+    #particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #0066ff, #8a2be2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav { position: absolute; top: 20px; right: 40px; display: flex; gap: 20px; }
+    nav a { color: #fff; text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; }
+    nav a:hover { color: #0ff; }
+
+    .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #0ff;
+      overflow: hidden;
+      margin: 0 auto 20px;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 { font-size: 2.5rem; }
+    h1 .highlight {
+      background: linear-gradient(90deg, #0066ff, #8a2be2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle { margin: 10px 0 20px; font-size: 1rem; opacity: 0.8; }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+    .socials a {
+      font-size: 1.5rem;
+      color: #fff;
+      transition: transform 0.2s;
+    }
+    .socials a:hover {
+      color: #0ff;
+      transform: scale(1.2);
+    }
+
+    .btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      color: #fff;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .btn:hover { opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="logo">&lt;/&gt; Co3er</div>
+
+  <nav>
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+    <a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <div class="card" id="home">
+    <div class="avatar">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThnn0k6OW93UBzuHr0DP30zFKr4QPOH4GlkA&s" alt="Profile">
+    </div>
+    <h1>Hey, I'm <span id="typed" class="highlight"></span></h1>
+    <p class="subtitle"></p>
+    <p class="description"></p>
+    <div class="socials">
+      <a href="https://discord.gg/8Q7zWBmSM5" target="_blank"><img src="1.png" alt="Discord" width="32" height="32"></a>
+      <a href="https://www.youtube.com/@co3er" target="_blank"><img src="2.png" alt="YouTube" width="32" height="32"></a>
+      <a href="https://www.instagram.com/fahdiimfs/" target="_blank"><img src="3.png" alt="Instagram" width="32" height="32"></a>
+      <a href="https://twitter.com/yourhandle" target="_blank"><img src="4.png" alt="Twitter" width="32" height="32"></a>
+      <a href="https://github.com/co3er" target="_blank"><img src="5.png" alt="GitHub" width="32" height="32"></a>
+    </div>
+    <button class="btn">DIE</button>
+  </div>
+
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#0ff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#0ff', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
+        modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      new Typed('#typed', {
+        strings: ["co3er", 'Fahad'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+        startDelay: 500,
+        loop: false,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    });
+  </script>
+</body>
+</html>
